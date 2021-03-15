@@ -1,4 +1,5 @@
 // Copyright 2021 by Liza
+#define CRT_SECURE_NO_WARNINGS
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 #include <iostream>
