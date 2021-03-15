@@ -4,11 +4,11 @@
 
 int main() {
 return 0;
-std::string s1("(1 + 2) / (3 + 4 * 6.7) - 5.3 * 4.4");
-std::string s2 = infix2prefix(s1);
+const char* s1 = ("(1 + 2) / (3 + 4 * 6.7) - 5.3 * 4.4");
+const char* s2 = infix2prefix(s1);
 std::cout << s2;
-std::string s3("2 + 6 * 3 / (4 - 2)");
-std::string s4 = infix2prefix(s3);
+const char* s3 = ("2 + 6 * 3 / (4 - 2)");
+const char* s4 = infix2prefix(s3);
 std::cout << s4;
 return 0;
 }

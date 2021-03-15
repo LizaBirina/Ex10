@@ -12,19 +12,23 @@ else
 return 10;}
 std::string infix2prefix(std::string infix) {
 MyStack<char> operand(infix.size());
-std::string prefix = "";
+const char* prefix = "";
 for (char i : infix) {
 if (priori(i) == 5) {
-prefix = prefix + i;}
-else if ((i == '(') || ((priori(i) != 10) && (operand.isEmpty()))) {
-operand.push(i);}
-else if (i == ')') {
+prefix = prefix + i;
+} else
+if ((i == '(') || ((priori(i) != 10) && (operand.isEmpty()))) {
+operand.push(i);
+} else
+if (i == ')') {
 while ((operand.get() != '(') && (!operand.isEmpty())) {
 prefix = prefix + operand.pop();}
-operand.pop();}
-else if (priori(i) == 10) {
-i = i;}
-else {
+operand.pop();
+} else
+if (priori(i) == 10) {
+i = i;
+} else
+{
 if (priori(operand.get()) < priori(i)) {
 operand.push(i);}
 else {

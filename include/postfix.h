@@ -1,5 +1,4 @@
 // Copyright 2021 by Liza
-#ifndef INCLUDE_PREFIX_H_
 #define INCLUDE_PREFIX_H_
 #include <string>
 std::string infix2prefix(std::string infix);
