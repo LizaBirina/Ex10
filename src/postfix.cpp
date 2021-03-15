@@ -15,22 +15,22 @@ MyStack<char> operand(infix.size());
 const char* prefix = "";
 for (char i : infix) {
 if (priori(i) == 5) {
-prefix = prefix + i;} 
+prefix = prefix + i;}
 else
 if ((i == '(') || ((priori(i) != 10) && (operand.isEmpty()))) {
-operand.push(i);} 
+operand.push(i);}
 else
 if (i == ')') {
 while ((operand.get() != '(') && (!operand.isEmpty())) {
 prefix = prefix + operand.pop();}
-operand.pop();} 
+operand.pop();}
 else
 if (priori(i) == 10) {
-i = i;} 
+i = i;}
 else
 { if (priori(operand.get()) < priori(i)) {
 operand.push(i);}
-else 
+else
 { while (priori(operand.get()) >= priori(i)) {
 if (operand.isEmpty()) break;
 prefix = prefix + operand.pop();}
