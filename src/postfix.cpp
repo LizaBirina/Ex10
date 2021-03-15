@@ -1,8 +1,8 @@
 // Copyright 2021 by Liza
-#include <iostream>
 #include "postfix.h"
-#include "MyStack.h"
+#include <iostream>
 #include <string>
+#include "MyStack.h"
 int priori(char z) {
 if (z == '(') return 0;
 else if (z == ')') return 1;
