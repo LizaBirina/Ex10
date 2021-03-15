@@ -1,7 +1,6 @@
 // Copyright 2021 by Liza
-#include "postfix.h"
 #include <iostream>
-#include <string>
+#include "postfix.h"
 #include "MyStack.h"
 int priori(char z) {
 if (z == '(') return 0;
@@ -13,7 +12,7 @@ else
 return 10;}
 std::string infix2prefix(std::string infix) {
 MyStack<char> operand(infix.size());
-std::string prefix = "";
+const char* prefix = "";
 for (char i : infix) {
 if (priori(i) == 5) {
 prefix = prefix + i;}
