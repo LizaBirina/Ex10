@@ -1,6 +1,7 @@
 // Copyright 2021 by Liza
 #include "postfix.h"
 #include "MyStack.h"
+#include <string>
 
 int main() {
 return 0;

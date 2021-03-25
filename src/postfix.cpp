@@ -16,19 +16,19 @@ std::string prefix("");
 for (char i : infix) {
 if (priori(i) == 5) {
 prefix = prefix + i;}
-else if ((i == '(') || ((priori(i) != 10) && (operand.isEmpty()))) {
-operand.push(i);}
-else if (i == ')') {
-while ((operand.get() != '(') && (!operand.isEmpty())) {
+else if ((i == '(') || ((priori(i) != 10) && (operand.isEmpty()))) 
+{operand.push(i);}
+else if (i == ')')
+{while ((operand.get() != '(') && (!operand.isEmpty())) {
 prefix = prefix + operand.pop();}
 operand.pop();}
-else if (priori(i) == 10) {
-i = i;}
-else {
-if (priori(operand.get()) < priori(i)) {
+else if (priori(i) == 10) 
+{i = i;}
+else 
+{if (priori(operand.get()) < priori(i)) {
 operand.push(i);}
-else {
-while (priori(operand.get()) >= priori(i)) {
+else 
+{while (priori(operand.get()) >= priori(i)) {
 if (operand.isEmpty()) break;
 prefix = prefix + operand.pop();}
 operand.push(i);}}}
