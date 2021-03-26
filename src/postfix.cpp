@@ -12,7 +12,7 @@ else
 return 10;}
 std::string infix2prefix(std::string infix) {
 MyStack<char> operand(infix.size());
-std::string prefix("");
+std::string prefix{ "" };
 for (char i : infix) {
 if (priori(i) == 5) {
 prefix = prefix + i;}
